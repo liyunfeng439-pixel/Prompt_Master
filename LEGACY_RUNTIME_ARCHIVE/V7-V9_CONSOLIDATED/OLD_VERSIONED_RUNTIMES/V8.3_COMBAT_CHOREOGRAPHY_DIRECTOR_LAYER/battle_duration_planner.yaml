@@ -1,0 +1,7 @@
+duration_modes:
+  5s:
+    purpose: impact_moment
+  10s:
+    purpose: tactical_exchange
+  30s:
+    purpose: cinematic_battle_arc

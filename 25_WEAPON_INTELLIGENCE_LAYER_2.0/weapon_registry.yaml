@@ -1,0 +1,75 @@
+version: 2.1
+categories:
+  fantasy:
+    - sword
+    - spear
+    - blade
+    - staff
+    - polearm
+    - fan
+    - whip
+    - chain_weapon
+    - artifact
+    - custom_weapon
+  modern:
+    - pistol
+    - rifle
+    - shotgun
+    - tactical_knife
+  cyber:
+    - energy_weapon
+    - mech_weapon
+
+# Universal remote-control capability is independent of category.
+# Category-specific profiles remain for morph/flexible behavior only.
+default_control_profile: universal_weapon
+universal_remote_control:
+  enabled: true
+  applies_to: all_canonical_weapons
+  modes:
+    - HAND_HELD
+    - TELEKINETIC
+    - SPIRIT_CONTROLLED
+    - REMOTE_ATTACK
+    - RETURN_CONTROL
+  control_sources:
+    - qi
+    - magic
+    - spiritual_force
+
+control_profiles:
+  universal_weapon:
+    modes:
+      - HAND_HELD
+      - TELEKINETIC
+      - SPIRIT_CONTROLLED
+      - REMOTE_ATTACK
+      - RETURN_CONTROL
+  small_artifact:
+    modes:
+      - HAND_HELD
+      - TELEKINETIC
+      - SPIRIT_CONTROLLED
+      - REMOTE_ATTACK
+      - RETURN_CONTROL
+  flexible_weapon:
+    modes:
+      - HAND_HELD
+      - TELEKINETIC
+      - SPIRIT_CONTROLLED
+      - REMOTE_ATTACK
+      - RETURN_CONTROL
+    morph:
+      - extend
+      - retract
+      - bind
+  staff_polearm:
+    modes:
+      - HAND_HELD
+      - TELEKINETIC
+      - SPIRIT_CONTROLLED
+      - REMOTE_ATTACK
+      - RETURN_CONTROL
+    morph:
+      - extend
+      - shorten

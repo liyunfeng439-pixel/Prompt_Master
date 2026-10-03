@@ -1,0 +1,10 @@
+pipeline:
+  - Asset Input
+  - Combat Analysis
+  - Scene Intelligence
+  - VFX Intelligence
+  - Material Simulation
+  - Physics Simulation
+  - System Optimization
+  - Prompt Compiler
+  - Output

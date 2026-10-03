@@ -1,0 +1,98 @@
+version: 10.9.0
+status: CANONICAL_CURRENT
+role: executable runtime contract authority
+current_execution_order:
+  - asset_ingestion
+  - fact_inference_guard
+  - immutable_canon
+  - master_combat_state
+  - state_contract_normalization
+  - combat_intent
+  - combat_first_pacing
+  - combat_personality
+  - combat_director_v5
+  - knowledge_retrieval
+  - weapon_execution_integrity
+  - v4_action_knowledge_resolution
+  - candidate_filtering
+  - tactical_action_selection
+  - opponent_prediction
+  - action_transition_validation
+  - transition_replanning
+  - action_transition_lookahead
+  - action_ability_runtime
+  - actor_reaction
+  - temporal_spatial_physics
+  - spatial_combat_director
+  - vfx_result_visualization
+  - phase_check
+  - beat_graph
+  - budget_aware_shot_planning
+  - shot_compression
+  - shot_budget
+  - shot_ir
+  - semantic_component_selection
+  - combat_semantic_compiler
+  - native_output_router
+  - adapter_semantic_regression
+  - deep_prompt_semantic_qa
+  - regression_gate
+hard_invariants:
+  - weapon_identity_integrity
+  - result_contract_integrity
+  - canonical_state_integrity
+  - transition_integrity
+  - transition_replanning_integrity
+  - transition_lookahead_integrity
+  - ability_execution_integrity
+  - result_lock_barrier
+  - beat_id_integrity
+  - shot_budget_integrity
+  - single_shot_ir_source
+  - native_compiler_required
+  - adapter_fact_preservation
+  - adapter_model_native_structure
+  - inference_boundary_preservation
+  - prompt_runtime_term_suppression
+  - semantic_redundancy_gate
+  - semantic_component_reuse_gate
+  - semantic_bundle_collision_gate
+  - action_family_diversity_gate
+  - outcome_diversity_gate
+  - dynamic_phase_consistency
+  - spatial_state_integrity
+  - spatial_transition_continuity
+  - opponent_prediction_non_authority
+  - budget_feedback_integrity
+  - final_prompt_quality_gate
+current_components:
+  combat_director: 30_COMBAT_DIRECTOR_BRAIN_V3.3/COMBAT_DIRECTOR_RUNTIME.md
+  transition_graph: 32_ACTION_TRANSITION_GRAPH_V2.1/ACTION_TRANSITION_GRAPH_RUNTIME.md
+  shot_compression: 31_SHOT_COMPRESSION_ENGINE_V2.1/SHOT_COMPRESSION_RULES.md
+  semantic_component_index: DATA/COMBAT_KNOWLEDGE/SEMANTIC_COMPONENT_INDEX_V10.9.0.json
+  semantic_diversity_engine: 43_COMBAT_SEMANTIC_DIVERSITY_ENGINE_V1.0/semantic_diversity_engine_v1030.py
+  semantic_compiler: 48_NATIVE_PROMPT_COMPILER_V3.1/native_prompt_compiler_v1090.py
+  deep_semantic_qa: 49_DEEP_PROMPT_SEMANTIC_QA_V3.1/deep_prompt_semantic_qa_v1090.py
+  runtime_harness: 47_RUNTIME_EXECUTION_HARNESS_V3.1/runtime_harness_v1090.py
+  shot_ir: CANONICAL_RUNTIME_V10.9.0/SHOT_IR_CONTRACT_V10.9.0.md
+  qa: QA_V10.9.0/V10.9.0_REGRESSION_RULES.md
+preflight_validation:
+  validator: TOOLS/validate_v1090.py
+  required_before_harness: true
+runtime_execution_harness_mode: zero_copy_in_process
+spatial_tactical_decision: true
+dual_actor_spatial_state: true
+environment_anchor_continuity: true
+spatial_transition_semantics: actor_target_aware
+spatial_actor_target_semantics: true
+
+
+# V10.9.0 closure rules
+closed_loop_corrections:
+  semantic_shot_director: true
+  camera_knowledge_resolver: true
+  vfx_knowledge_resolver: true
+  lookahead_replan: true
+  budget_remerge_applied: true
+  highlight_target_is_soft: true
+  asset_driven_fact_bound: true

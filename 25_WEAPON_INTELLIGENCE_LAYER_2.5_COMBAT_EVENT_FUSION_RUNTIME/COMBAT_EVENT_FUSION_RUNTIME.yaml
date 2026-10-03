@@ -1,0 +1,19 @@
+version: "10.16.0"
+name: "Combat Event Fusion Runtime"
+
+pipeline:
+  - character_ability
+  - weapon_behavior
+  - tactical_choice
+  - elemental_affinity
+  - vfx_chain
+  - physics_result
+  - environment_feedback
+  - camera_highlight_event
+  - shot_ir_export
+
+contracts:
+  require_cause_chain: true
+  require_physical_result: true
+  require_highlight_binding: true
+  preserve_weapon_identity: true

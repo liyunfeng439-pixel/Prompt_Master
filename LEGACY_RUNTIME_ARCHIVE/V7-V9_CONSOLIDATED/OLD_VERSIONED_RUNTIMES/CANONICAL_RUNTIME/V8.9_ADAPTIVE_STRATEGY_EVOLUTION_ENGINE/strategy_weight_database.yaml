@@ -1,0 +1,15 @@
+strategy_weights:
+  action_strategy:
+    initial_weight: 0.5
+  battle_template:
+    initial_weight: 0.5
+  camera_strategy:
+    initial_weight: 0.5
+  prompt_pattern:
+    initial_weight: 0.5
+
+update:
+  based_on:
+    - success_score
+    - failure_rate
+    - model_feedback

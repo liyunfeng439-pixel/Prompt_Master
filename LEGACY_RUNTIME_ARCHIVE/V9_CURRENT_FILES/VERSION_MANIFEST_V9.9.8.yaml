@@ -1,0 +1,4 @@
+version: V9.9.8
+name: Combat Prompt Kernel Finalization
+runtime_entry: CANONICAL_RUNTIME/RUNTIME_MASTER_CURRENT_V9.9.8.yaml
+purpose: Reference image to AI video combat prompt production

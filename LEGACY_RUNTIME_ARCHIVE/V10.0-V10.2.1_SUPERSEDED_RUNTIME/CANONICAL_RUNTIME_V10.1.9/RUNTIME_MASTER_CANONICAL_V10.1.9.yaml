@@ -1,0 +1,57 @@
+version: 10.1.9
+status: CANONICAL_CURRENT
+role: executable runtime contract authority
+current_execution_order:
+  - asset_ingestion
+  - fact_inference_guard
+  - immutable_canon
+  - master_combat_state
+  - state_contract_normalization
+  - combat_intent
+  - combat_first_pacing
+  - combat_personality
+  - combat_director
+  - knowledge_retrieval
+  - weapon_execution_integrity
+  - v4_action_knowledge_resolution
+  - candidate_filtering
+  - tactical_action_selection
+  - action_transition_validation
+  - action_ability_runtime
+  - actor_reaction
+  - temporal_spatial_physics
+  - vfx_result_visualization
+  - ending_state
+  - beat_graph
+  - shot_compression
+  - shot_budget
+  - shot_ir
+  - combat_semantic_compiler
+  - native_output_router
+  - adapter_semantic_regression
+  - runtime_prompt_quality_qa
+  - regression_gate
+hard_invariants:
+  - weapon_identity_integrity
+  - result_contract_integrity
+  - canonical_state_integrity
+  - transition_integrity
+  - ability_execution_integrity
+  - result_lock_barrier
+  - beat_id_integrity
+  - shot_budget_integrity
+  - single_shot_ir_source
+  - native_compiler_required
+  - adapter_fact_preservation
+  - inference_boundary_preservation
+  - prompt_runtime_term_suppression
+  - semantic_redundancy_gate
+  - action_priority_gate
+  - camera_vfx_compression_gate
+  - final_prompt_quality_gate
+current_components:
+  semantic_compiler: 41_COMBAT_SEMANTIC_COMPILER_V2.0/combat_semantic_compiler_v1019.py
+  semantic_qa: 42_PROMPT_SEMANTIC_QA_V1.0/prompt_semantic_qa_v1019.py
+  runtime_harness: 36_RUNTIME_EXECUTION_HARNESS_V1.0/runtime_harness_v1019.py
+  shot_ir: CANONICAL_RUNTIME_V10.1.9/SHOT_IR_CONTRACT_V10.1.9.md
+  qa: QA_V10.1.9/V10.1.9_REGRESSION_RULES.md

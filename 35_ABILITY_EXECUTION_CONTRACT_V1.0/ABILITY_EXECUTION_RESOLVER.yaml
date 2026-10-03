@@ -1,0 +1,31 @@
+version: "2.0"
+status: ACTIVE
+profile_source: ABILITY_MANIFESTATION_PROFILES_32.json
+contract_families:
+  - manifestation
+  - avatar
+  - domain
+  - ultimate
+resolution_order:
+  - canon_authorization_check
+  - fact_inference_guard
+  - archetype_binding
+  - profile_variant_selection
+  - weapon_style_binding
+  - activation
+  - energy_gathering
+  - manifestation
+  - weapon_stance_synchronization
+  - first_ability_action
+  - contact_or_field_result
+  - manifestation_damage
+  - depletion_or_persistence
+  - result_lock
+  - escape_or_no_chase_decision
+fail_safe:
+  unauthorized_ability: reject
+  canon_conflict: reject
+  missing_activation: reject
+  result_without_cause: reject
+  result_lock_missing: reject
+  chase_state_without_authorization: reject

@@ -1,0 +1,17 @@
+version: 7.0
+outputs:
+  universal:
+    required: true
+  seedance_2_5:
+    required:
+      - cn
+      - en
+    template: SEEDANCE_2.5_OFFICIAL_FORMAT_TEMPLATE
+  minimax_h3:
+    required:
+      - cn
+      - en
+    template: MINIMAX_H3_OFFICIAL_FORMAT_TEMPLATE
+rules:
+  expose_internal_reasoning: false
+  output_only_visible_events: true

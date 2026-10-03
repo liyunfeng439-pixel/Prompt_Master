@@ -1,0 +1,28 @@
+version: "1.0"
+status: ACTIVE
+source_profiles: WEAPON_EXECUTION_PROFILES_V1.json
+resolution_order:
+  - immutable_canon_weapon_check
+  - action_identity_check
+  - execution_weapon_control_check
+  - weapon_action_layer_check
+  - martial_layer_check
+  - graph_layer_check
+  - prompt_semantics_check
+  - transition_contract_check
+repair:
+  when_top_level_weapon_is_locked: rebind_execution_layers
+  when_canon_conflict: reject_candidate
+  when_unknown_weapon: retrieve_alternative
+required_equalities:
+  - action.weapon == execution_model.weapon_control.weapon
+  - action.weapon == execution_model.weapon_control.weapon_identity
+  - action.weapon == weapon_binding.canonical_weapon
+  - action.weapon == weapon_binding.execution_weapon
+  - action.weapon == prompt_semantics.weapon_identity
+  - action.weapon == transition_contract.requires.weapon_identity
+  - action.weapon == transition_contract.result.weapon_identity
+trace_fields:
+  - weapon_integrity_result
+  - weapon_profile_id
+  - canonical_weapon

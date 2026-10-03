@@ -1,0 +1,16 @@
+decision_tree:
+  states:
+    - neutral
+    - advantage
+    - disadvantage
+    - critical
+  decisions:
+    neutral:
+      - probe
+      - reposition
+    advantage:
+      - pressure
+      - finish
+    disadvantage:
+      - defend
+      - escape

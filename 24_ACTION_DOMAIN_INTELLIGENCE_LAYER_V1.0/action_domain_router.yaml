@@ -1,0 +1,15 @@
+version: 1.0
+router:
+  input:
+    - character
+    - environment
+    - weapons
+    - combat_style
+  output:
+    domain:
+      - fantasy
+      - modern
+      - military
+      - cyber
+      - monster
+      - hybrid

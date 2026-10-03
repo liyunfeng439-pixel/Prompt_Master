@@ -1,0 +1,30 @@
+router: NATIVE_OUTPUT_ROUTER_V10.1.9
+status: CANONICAL_CURRENT
+version: 10.1.9
+input: ../CANONICAL_RUNTIME_V10.1.9/SHOT_IR_CONTRACT_V10.1.9.md
+native_compiler: ../41_COMBAT_SEMANTIC_COMPILER_V2.0/combat_semantic_compiler_v1019.py
+semantic_regression: ../40_RUNTIME_SEMANTIC_REGRESSION_LAYER_V1.0/SEMANTIC_REGRESSION_RULES.md
+qa_gate: ../QA_V10.1.9/V10.1.9_REGRESSION_RULES.md
+outputs:
+  default: [universal, seedance_2_5, minimax_h3]
+  single_model_allowed: true
+invariants:
+  - actor_identity
+  - weapon_identity
+  - event_ids
+  - causal_order
+  - spatial_provenance
+  - physical_result
+  - damage_state
+  - ability_result
+  - ending_state
+  - no_chase
+forbidden:
+  - copy_paste_same_prompt_into_all_adapters
+  - invent_new_events
+  - change_event_order
+  - promote_inferred_fact_to_canon
+  - bypass_shot_budget
+  - bypass_action_transition_validation
+  - bypass_weapon_integrity
+  - bypass_ability_execution_contract

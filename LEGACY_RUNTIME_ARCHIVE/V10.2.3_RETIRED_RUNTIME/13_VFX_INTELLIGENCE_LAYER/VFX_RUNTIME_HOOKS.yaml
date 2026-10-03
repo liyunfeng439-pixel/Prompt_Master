@@ -1,0 +1,23 @@
+runtime: V10.1.6
+layer: VFX_INTELLIGENCE_LAYER_3.0
+
+hooks:
+  character_vfx_profile:
+    enabled: true
+    source: CHARACTER_STYLE_LEARNING_ENGINE
+
+  move_vfx_binding:
+    enabled: true
+    source: MOVE_VFX_AUTO_BINDING_ENGINE
+
+  procedural_generation:
+    enabled: true
+    source: PROCEDURAL_VFX_NODE_GENERATOR
+
+  cinematic_control:
+    enabled: true
+    source: CINEMATIC_VFX_CONTROLLER_RUNTIME
+
+  prompt_compression:
+    enabled: true
+    source: VFX_PROMPT_COMPILER_RUNTIME

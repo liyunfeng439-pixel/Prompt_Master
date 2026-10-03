@@ -1,0 +1,7 @@
+version: 1.0
+rules:
+  - convert_camera_style_to:
+      - position
+      - movement
+      - purpose
+  - preserve_existing_shot_budget: true

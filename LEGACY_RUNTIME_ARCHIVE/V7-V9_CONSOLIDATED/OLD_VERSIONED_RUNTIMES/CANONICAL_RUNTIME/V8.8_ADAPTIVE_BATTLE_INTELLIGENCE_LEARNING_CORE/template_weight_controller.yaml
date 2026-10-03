@@ -1,0 +1,9 @@
+template_weight_controller:
+  purpose: dynamic battle template selection
+
+  factors:
+    - character_type
+    - weapon
+    - environment
+    - model_behavior
+    - previous_success_rate

@@ -1,0 +1,26 @@
+validation:
+  require_outputs:
+    - universal
+    - seedance_2_5_cn
+    - seedance_2_5_en
+    - minimax_h3_cn
+    - minimax_h3_en
+
+  seedance:
+    required_sections:
+      - Goal
+      - Reference roles
+      - Subject and scene
+      - Sequence
+      - Look and camera
+      - Sound
+      - Continuity
+
+  minimax_h3:
+    required_sections:
+      - subject_definitions
+      - summary
+      - retention_analysis
+      - detailed_description
+      - overall_soundscape
+      - non_diegetic_music

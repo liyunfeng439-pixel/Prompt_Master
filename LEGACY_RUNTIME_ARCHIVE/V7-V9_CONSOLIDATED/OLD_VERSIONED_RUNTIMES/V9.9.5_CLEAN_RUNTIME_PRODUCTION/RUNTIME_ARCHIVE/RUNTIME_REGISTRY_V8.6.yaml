@@ -1,0 +1,9 @@
+
+version: V8.6
+modules:
+ - Reference_Image_Character_Analyzer
+ - Combat_Style_Auto_Selector
+ - Autonomous_Battle_Scenario_Generator
+ - Adaptive_Camera_Director
+ - Prompt_Self_Repair_Loop
+ - Final_Prompt_Package_Generator

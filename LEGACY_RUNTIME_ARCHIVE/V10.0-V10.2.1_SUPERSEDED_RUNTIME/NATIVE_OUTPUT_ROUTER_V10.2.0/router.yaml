@@ -1,0 +1,28 @@
+version: 10.2.0
+status: CANONICAL_CURRENT
+source: SHOT_IR_V10.2.0
+compiler: 45_NATIVE_PROMPT_COMPILER_V2.0/native_prompt_compiler_v1020.py
+qa: 44_DEEP_PROMPT_SEMANTIC_QA_V2.0/deep_prompt_semantic_qa_v1020.py
+adapters:
+  - universal
+  - seedance_2_5
+  - minimax_h3
+immutable_fields:
+  - actors
+  - weapons
+  - event_ids
+  - event_order
+  - outcomes
+  - ending
+  - provenance
+semantic_fields_allowed_to_change:
+  - phrase_compaction
+  - shot_format
+  - model_tokenization
+  - pacing_wording
+forbidden_changes:
+  - actor_identity
+  - weapon_identity
+  - event_order
+  - physical_result
+  - ending

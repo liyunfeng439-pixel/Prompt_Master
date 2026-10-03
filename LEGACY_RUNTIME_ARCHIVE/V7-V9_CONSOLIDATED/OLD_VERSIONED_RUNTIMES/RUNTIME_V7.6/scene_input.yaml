@@ -1,0 +1,22 @@
+scene_reference:
+  required: false
+  types:
+    - image
+    - multiple_images
+    - concept_art
+    - map
+scene_parser:
+  environment_detection: true
+  landmark_detection: true
+  material_analysis: true
+anchor_generator:
+  enabled: true
+  output:
+    - landmark_id
+    - position_relation
+    - interaction_value
+destruction:
+  enabled: true
+  persistence_tracking: true
+camera:
+  scene_aware_planning: true

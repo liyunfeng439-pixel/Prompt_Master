@@ -1,0 +1,15 @@
+version: V9.9
+name: Combat Prompt Execution Kernel
+entrypoint: COMBAT_PROMPT_EXECUTION_KERNEL
+mode: production
+flow:
+ - reference_vision_analyzer
+ - character_combat_profile
+ - scene_tactical_analyzer
+ - combat_style_selector
+ - action_choreography
+ - camera_director
+ - vfx_director
+ - native_prompt_compiler
+ - validator
+ - repair_loop

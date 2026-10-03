@@ -1,0 +1,30 @@
+version: 7.9.5.3
+bridge: shot_budget_native_compiler
+
+input:
+  source: shot_budget_controller
+
+adapter_output:
+  shot_ir:
+    required:
+      - shot_id
+      - duration
+      - action_chain
+      - camera
+      - vfx
+      - continuity_state
+      - ending_state
+
+routing:
+  seedance_2_5:
+    compiler: native_model_compiler_layer_8
+    template: SEEDANCE_2.5_OFFICIAL_FORMAT_TEMPLATE
+  minimax_h3:
+    compiler: native_model_compiler_layer_8
+    template: MINIMAX_H3_OFFICIAL_FORMAT_TEMPLATE
+
+constraints:
+  preserve_existing_templates: true
+  modify_combat_core: false
+  modify_vfx_core: false
+  modify_character_core: false

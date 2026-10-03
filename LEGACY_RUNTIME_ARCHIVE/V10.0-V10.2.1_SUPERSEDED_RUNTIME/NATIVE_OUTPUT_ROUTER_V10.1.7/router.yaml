@@ -1,0 +1,42 @@
+router: NATIVE_OUTPUT_ROUTER_V10.1.7
+status: CANONICAL_CURRENT
+version: 10.1.7
+input: ../CANONICAL_RUNTIME_V10.1.7/SHOT_IR_CONTRACT_V10.1.7.md
+governance: ../V10.1.7_RUNTIME_GOVERNANCE.md
+qa_gate: ../QA_V10.1.7/V10.1.7_REGRESSION_RULES.md
+invariants:
+  - MASTER_COMBAT_STATE
+  - IMMUTABLE_CANON
+  - FACT_INFERENCE_PROVENANCE
+  - EVENT_ID
+  - causal_order
+  - actor_identity
+  - weapon_identity
+  - weapon_execution_integrity
+  - state_contract_integrity
+  - spatial_state
+  - physical_result
+  - damage_state
+  - ending_state
+  - ability_contract_integrity
+outputs:
+  default: [universal, seedance_2_5, minimax_h3]
+  single_model_allowed: true
+adapters:
+  universal: universal_adapter.md
+  seedance_2_5: seedance_2.5_native_adapter.md
+  minimax_h3: minimax_h3_native_adapter.md
+forbidden:
+  - copy_paste_same_prompt_into_all_adapters
+  - invent_new_events
+  - change_event_order
+  - change_character_or_weapon_identity
+  - change_spatial_state
+  - change_physical_result
+  - change_damage_state
+  - change_ending_state
+  - promote_inferred_fact_to_canon
+  - bypass_shot_budget
+  - bypass_action_transition_validation
+  - bypass_weapon_integrity
+  - bypass_ability_execution_contract

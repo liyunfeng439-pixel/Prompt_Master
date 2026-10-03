@@ -1,0 +1,15 @@
+version: "10.16.0"
+fields:
+  weapon_behavior:
+    control_mode: required
+    behavior_node: required
+    transition: required
+  ability_fusion:
+    source: required
+    element: optional
+  event_result:
+    physics: required
+    environment: optional
+  highlight:
+    camera_trigger: optional
+    impact_event: optional

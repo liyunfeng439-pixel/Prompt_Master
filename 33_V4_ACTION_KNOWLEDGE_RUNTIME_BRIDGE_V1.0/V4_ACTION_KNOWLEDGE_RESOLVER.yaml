@@ -1,0 +1,69 @@
+version: "1.1"
+status: ACTIVE
+source_schema: V4.0
+source_files:
+  actions: ../DATA/COMBAT_KNOWLEDGE/actions_10000.json
+  weapon_actions: ../DATA/COMBAT_KNOWLEDGE/weapon_actions_1000.json
+  combo_tree: ../DATA/COMBAT_KNOWLEDGE/combo_tree_1000.json
+  martial: ../DATA/MARTIAL_DATABASE/martial_unified_2000_full.json
+  motion_graph: ../DATA/MARTIAL_DATABASE/production/martial_motion_graph_2000.json
+  action_graph: ../29_ACTION_UNIVERSE_DATABASE_EXPANSION_V8.1/action_graphs/action_universe_graph_18000.json
+  binding_matrix: ../29_ACTION_UNIVERSE_DATABASE_EXPANSION_V8.1/binding_matrix/action_camera_vfx_binding_matrix.json
+required_resolution:
+  - action_id
+  - core_id
+  - variant
+  - weapon_identity
+  - execution_model.distance
+  - execution_model.stance
+  - execution_model.joint_chain
+  - execution_model.center_of_mass
+  - execution_model.weapon_control
+  - execution_model.contact_geometry
+  - opponent_response
+  - counter_logic
+  - failure_and_recovery
+  - transition
+  - transition_contract
+  - cinematic
+  - vfx
+  - environment
+  - prompt_semantics
+resolution_order:
+  - immutable_canon_check
+  - asset_weapon_compatibility
+  - weapon_execution_integrity_gate
+  - current_state_compatibility
+  - tactical_intent_compatibility
+  - spatial_compatibility
+  - physics_compatibility
+  - personality_preference
+  - camera_followability
+  - transition_compatibility
+  - complexity_budget
+state_bindings:
+  distance: MASTER_COMBAT_STATE.spatial.distance
+  stance: MASTER_COMBAT_STATE.actor.pose.stance
+  center_of_mass: MASTER_COMBAT_STATE.actor.motion.center_of_mass
+  support_foot: MASTER_COMBAT_STATE.actor.pose.support_foot
+  facing: MASTER_COMBAT_STATE.spatial.facing
+  weapon_state: MASTER_COMBAT_STATE.weapon.state
+  weapon_grip: MASTER_COMBAT_STATE.weapon.grip
+  momentum: MASTER_COMBAT_STATE.actor.motion.momentum
+  target_state: MASTER_COMBAT_STATE.target.combat_state
+  terrain: MASTER_COMBAT_STATE.environment.terrain
+terrain_policy:
+  default: soft_constraint
+  hard_constraint_when: environment.binding_mode == required_contact
+outputs:
+  candidate: ACTION_KNOWLEDGE_CANDIDATE
+  execution: ACTION_EXECUTION_CONTRACT
+  reaction: OPPONENT_REACTION_CONTRACT
+  transition: ACTION_TRANSITION_CONTRACT
+  presentation: ACTION_PRESENTATION_CONTRACT
+fail_safe:
+  missing_required_field: reject_candidate
+  canon_conflict: reject_candidate
+  weapon_integrity_mismatch: repair_then_revalidate
+  unknown_asset_fact: mark_unknown_and_retrieve_alternative
+  illegal_transition: reject_transition

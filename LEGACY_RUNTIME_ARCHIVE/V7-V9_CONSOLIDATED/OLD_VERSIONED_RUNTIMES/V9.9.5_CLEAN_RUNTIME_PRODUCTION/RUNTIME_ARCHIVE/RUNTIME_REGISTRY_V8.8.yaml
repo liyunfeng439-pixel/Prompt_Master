@@ -1,0 +1,14 @@
+modules:
+  - Autonomous_Battle_Director_V8.6
+  - Battle_Director_Learning_Optimization_V8.7
+  - Adaptive_Battle_Intelligence_Learning_Core_V8.8
+
+learning_loop:
+  enabled: true
+
+pipeline:
+  - generate
+  - evaluate
+  - analyze
+  - optimize
+  - update_strategy

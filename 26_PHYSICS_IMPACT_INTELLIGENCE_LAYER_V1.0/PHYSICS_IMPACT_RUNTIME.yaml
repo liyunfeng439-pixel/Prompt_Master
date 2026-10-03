@@ -1,0 +1,9 @@
+version: "10.16.0"
+physics_impact_intelligence:
+  weapon_mass_profile: true
+  momentum_transfer: true
+  body_force_response: true
+  impact_deformation: true
+  environment_damage_propagation: true
+  spatial_displacement_result: true
+  camera_impact_response: true

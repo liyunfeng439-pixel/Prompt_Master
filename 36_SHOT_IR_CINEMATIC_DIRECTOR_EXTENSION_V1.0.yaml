@@ -1,0 +1,7 @@
+version: "10.18.1"
+cinematic_director:
+  visual_priority: true
+  camera_type: auto_select
+  slow_motion_window: event_driven
+  spatial_transition: enabled
+  final_composition: enabled

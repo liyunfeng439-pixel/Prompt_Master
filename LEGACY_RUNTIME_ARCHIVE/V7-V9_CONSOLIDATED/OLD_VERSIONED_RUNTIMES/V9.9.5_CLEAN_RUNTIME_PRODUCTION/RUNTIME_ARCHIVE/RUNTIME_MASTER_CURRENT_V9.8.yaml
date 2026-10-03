@@ -1,0 +1,23 @@
+# V9.8 Runtime Optimization
+mode_selector: enabled
+default_mode: FAST_COMBAT_PROMPT
+
+pipeline:
+  - reference_image_analysis
+  - character_combat_profile
+  - scene_tactical_analysis
+  - combat_style_selection
+  - action_choreography
+  - camera_director
+  - vfx_generation
+  - native_prompt_compiler
+
+advanced:
+  universe_simulation: optional
+  narrative_engine: optional
+  reality_simulation: optional
+
+model_target:
+  - Qwen3.8
+  - Seedance
+  - MiniMax

@@ -1,0 +1,20 @@
+version: "10.18.0"
+module: ADAPTIVE_COMBAT_NARRATIVE_RUNTIME
+execution_position: after_combat_event_before_shot_planning
+inputs:
+  - combat_state
+  - current_phase
+  - tactical_problem
+  - previous_event_result
+  - action_contract
+  - spatial_state
+  - opponent_prediction
+outputs:
+  - event_narrative
+  - narrative_curve
+  - narrative_trace
+constraints:
+  immutable_canon: true
+  no_new_combat_event: true
+  no_invented_outcome: true
+  result_lock_barrier: true

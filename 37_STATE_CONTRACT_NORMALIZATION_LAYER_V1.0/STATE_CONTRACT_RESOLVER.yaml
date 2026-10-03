@@ -1,0 +1,17 @@
+version: "1.0"
+status: ACTIVE
+authority: execution_model.ids
+normalization_order:
+  - read_execution_model_ids
+  - read_transition_contract_normalized_fields
+  - compare_action_weapon
+  - compare_opponent_outcome
+  - bind_master_combat_state
+  - reject_conflict_or_repair_from_authority
+repair:
+  prose_vs_id: preserve_id_use_prose_as_description
+  execution_vs_transition_conflict: repair_transition_from_execution_model
+  outcome_conflict: repair_transition_from_opponent_response
+fail_safe:
+  unknown_state_id: reject_candidate
+  canon_conflict: reject_candidate

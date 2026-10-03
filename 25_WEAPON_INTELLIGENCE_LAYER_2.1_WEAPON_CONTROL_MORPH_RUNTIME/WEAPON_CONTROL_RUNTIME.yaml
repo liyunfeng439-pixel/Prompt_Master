@@ -1,0 +1,138 @@
+version: 1.3
+purpose: Universal Weapon Control Runtime
+
+# Universal rule:
+# Every canonical weapon may enter remote/telekinetic/spirit-controlled combat.
+# Weapon category never determines whether remote control is allowed.
+# Control mode is selected by combat intent and explicit action semantics.
+universal_weapon_control:
+  enabled: true
+  applies_to: all_canonical_weapons
+  default_profile: universal_weapon
+  remote_control_capable: true
+  allowed_remote_modes:
+    - TELEKINETIC
+    - SPIRIT_CONTROLLED
+    - REMOTE_ATTACK
+    - RETURN_CONTROL
+  preserve_weapon_identity: true
+  preserve_weapon_count: true
+  preserve_weapon_geometry: true
+  preserve_weapon_material: true
+  preserve_weapon_mass_properties: true
+  activation_policy: bounded_contextual_tactical_selection
+  explicit_remote_intent_overrides_threshold: true
+  autonomous_activation_threshold: 68
+
+control_modes:
+  - HAND_HELD
+  - TELEKINETIC
+  - SPIRIT_CONTROLLED
+  - REMOTE_ATTACK
+  - RETURN_CONTROL
+  - MORPH_CONTROL
+
+weapon_states:
+  location:
+    - hand
+    - airborne
+    - target_space
+    - returning
+  control_source:
+    - physical_grip
+    - qi
+    - magic
+    - spiritual_force
+
+remote_control_contract:
+  trigger:
+    - explicit_remote_weapon_intent
+    - explicit_telekinetic_intent
+    - explicit_spirit_control_intent
+    - weapon_release_with_continued_control
+  required_fields:
+    - weapon_identity
+    - control_mode
+    - control_source
+    - trajectory_or_target
+    - state_transition
+  physical_rules:
+    - weapon_must_leave_hand_before_remote_attack
+    - weapon_retains_real_mass_and_inertia
+    - trajectory_changes_require_control_cause
+    - contact_produces_force_transfer
+    - return_requires_return_control_or_explicit_recovery
+  forbidden:
+    - weapon_duplication
+    - weapon_identity_change
+    - instantaneous_teleportation
+    - unexplained_direction_change
+    - weightless_motion
+
+universal_weapon:
+  modes:
+    - HAND_HELD
+    - TELEKINETIC
+    - SPIRIT_CONTROLLED
+    - REMOTE_ATTACK
+    - RETURN_CONTROL
+  control_sources:
+    - qi
+    - magic
+    - spiritual_force
+  patterns:
+    - release
+    - airborne
+    - orbit
+    - tracking
+    - multi_angle_attack
+    - trajectory_change
+    - multi_angle_attack
+    - environment_redirect
+    - target_strike
+    - return
+
+morph:
+  supported:
+    - staff
+    - spear
+    - polearm
+  operations:
+    - extend
+    - shorten
+
+flexible_weapon:
+  supported:
+    - whip
+    - chain_weapon
+  operations:
+    - extend
+    - coil
+    - bind
+    - retract
+
+runtime_state:
+  length:
+    - current
+    - max
+  trajectory:
+    - origin
+    - target
+  energy:
+    - active
+    - level
+
+force_behavior:
+  remote_weapon:
+    - release_force
+    - flight_inertia
+    - trajectory_control
+    - impact_force_transfer
+    - return_force
+  flexible_weapon:
+    - anchor
+    - force_transfer
+    - pull
+
+tracking_is_distinct_from_orbit: true
+execution_variant_required_for_remote: true

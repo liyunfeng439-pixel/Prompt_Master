@@ -1,0 +1,36 @@
+# V10.1.4 Regression Rules
+
+## PASS requires
+- SKILL metadata = 10.1.4
+- one canonical current runtime = V10.1.4
+- every current authority path exists
+- every versioned current authority file declares V10.1.4
+- 30s default hard_max_shot_count = 7
+- Beat Auto-Split cannot increase final shot count
+- Combat Director runs before Beat Graph
+- Action Transition Validation runs before Beat Graph
+- invalid physical/spatial/weapon transitions are rejected
+- Shot Compression preserves all required causal and transition dependencies
+- all final shots compile from one SHOT_IR contract
+- SHOT_IR Required fields are identical in contract and Shot Budget
+- Seedance 2.5 and MiniMax H3 use separate adapters
+- existing visible adapter output templates remain unchanged
+- adapters preserve invariant event/state fields
+- legacy runtime files cannot override V10.1.4
+- internal diagnostics are absent from final model-facing output
+- RESULT_LOCK cannot be changed by Ending Shot
+- current runtime never relies on a non-existent path
+
+## FAIL if
+- 30s output has 8+ final shots without explicit user instruction
+- an adapter invents, deletes or reorders a required causal event
+- old runtime is selected as current because of filename/version wording
+- current file points to a non-existent authority path
+- SHOT_IR field names drift between contract, Shot Budget and router
+- an action has no tactical reason and no justified result
+- a selected action cannot transition physically/spatially into the next action
+- two consecutive exchanges repeat without meaningful decision/state change
+- shot compression hides a missing physical result or illegal transition
+- RESULT_LOCK is mutated after final impact
+- unverified vendor formatting is asserted as official
+- QA validates against a prior Runtime version

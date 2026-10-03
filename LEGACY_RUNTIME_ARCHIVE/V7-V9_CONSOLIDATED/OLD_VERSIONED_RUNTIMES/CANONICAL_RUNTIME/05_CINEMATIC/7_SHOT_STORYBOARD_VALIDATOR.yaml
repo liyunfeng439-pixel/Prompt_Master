@@ -1,0 +1,9 @@
+storyboard_control:
+  max_shots: 7
+  default_shots: 7
+  overflow_action: merge_low_priority_shots
+  preserve:
+    - combat_causality
+    - character_identity
+    - final_exchange
+    - ending_state

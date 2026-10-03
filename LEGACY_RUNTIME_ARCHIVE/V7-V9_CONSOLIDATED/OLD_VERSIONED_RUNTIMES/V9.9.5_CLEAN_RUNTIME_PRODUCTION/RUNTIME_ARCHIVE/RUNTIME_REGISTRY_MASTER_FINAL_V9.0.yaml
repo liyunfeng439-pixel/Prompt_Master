@@ -1,0 +1,14 @@
+runtime:
+  architecture: multi_agent
+
+agents:
+  - Battle_Director_Agent
+  - Combat_Choreography_Agent
+  - Camera_Director_Agent
+  - VFX_Intelligence_Agent
+  - Prompt_Engineering_Agent
+  - Quality_Control_Agent
+
+learning:
+  strategy_evolution: enabled
+  feedback_loop: enabled

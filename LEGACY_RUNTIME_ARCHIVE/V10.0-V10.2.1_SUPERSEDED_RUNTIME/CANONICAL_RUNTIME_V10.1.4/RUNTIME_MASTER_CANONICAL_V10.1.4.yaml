@@ -1,0 +1,53 @@
+version: 10.1.4
+status: CANONICAL_CURRENT
+name: Combat Prompt Master Native Combat Execution OS
+entry: ../SKILL.md
+contracts:
+  shot_budget: SHOT_BUDGET_CONTROLLER_V10.1.4.md
+  shot_ir: SHOT_IR_CONTRACT_V10.1.4.md
+  native_compiler_bridge: NATIVE_COMPILER_BRIDGE_V10.1.4.md
+  native_router: ../NATIVE_OUTPUT_ROUTER_V10.1.4/router.yaml
+  qa: ../QA_V10.1.4/V10.1.4_REGRESSION_RULES.md
+  governance: ../V10.1.4_RUNTIME_GOVERNANCE.md
+runtime_order:
+  - asset_ingestion
+  - asset_normalization
+  - immutable_canon
+  - master_combat_state
+  - combat_intent
+  - combat_first_pacing
+  - combat_style_inference
+  - combat_director_brain
+  - knowledge_retrieval
+  - candidate_filtering
+  - tactical_action_selection
+  - action_transition_validation
+  - action_ability_runtime
+  - actor_reaction
+  - temporal_spatial_event_identity
+  - physics_impact_damage
+  - vfx_result_visualization
+  - final_combat_sequence
+  - ending_state
+  - beat_graph
+  - shot_compression
+  - shot_budget
+  - shot_ir
+  - native_output_router
+  - model_adapter
+  - qa_repair
+  - regression_gate
+hard_invariants:
+  - immutable_canon
+  - event_identity
+  - causal_order
+  - spatial_continuity
+  - physical_result
+  - damage_continuity
+  - ending_state
+  - shot_budget
+  - shot_ir_single_source
+  - adapter_semantic_invariants
+  - action_transition_validity
+  - runtime_path_integrity
+  - no_legacy_override

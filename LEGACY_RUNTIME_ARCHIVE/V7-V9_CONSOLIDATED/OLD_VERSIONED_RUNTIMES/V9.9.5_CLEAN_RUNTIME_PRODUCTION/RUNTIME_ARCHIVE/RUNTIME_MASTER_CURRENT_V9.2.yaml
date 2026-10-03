@@ -1,0 +1,14 @@
+runtime:
+  version: V9.2
+  architecture: autonomous_production_manager
+
+layers:
+  - multi_agent_collaboration
+  - task_decomposition
+  - agent_scheduler
+  - scenario_selection
+  - production_timeline
+  - quality_feedback_loop
+
+entry_point:
+  unified_controller: enabled

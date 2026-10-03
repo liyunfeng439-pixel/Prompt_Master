@@ -1,0 +1,25 @@
+runtime:
+  version: V9.4
+  architecture: battle_universe_simulation_core
+
+layers:
+  creative_director: enabled
+  production_manager: enabled
+  multi_agent_collaboration: enabled
+  universe_memory: enabled
+  character_memory: enabled
+  weapon_evolution: enabled
+  world_rules: enabled
+  runtime_governance: enabled
+
+pipeline:
+  - reference_analysis
+  - creative_intent_analysis
+  - universe_state_check
+  - production_management
+  - multi_agent_planning
+  - battle_simulation
+  - storyboard_generation
+  - native_prompt_compilation
+  - quality_control
+  - memory_update

@@ -1,0 +1,6 @@
+version: 1.0
+rules:
+  - source: abstract_combat_phrase
+    target: visible_motion_sequence
+  - preserve: action_order
+  - preserve: character_identity

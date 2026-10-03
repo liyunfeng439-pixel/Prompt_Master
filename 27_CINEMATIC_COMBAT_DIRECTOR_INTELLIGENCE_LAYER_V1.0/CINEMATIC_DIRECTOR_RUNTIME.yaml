@@ -1,0 +1,21 @@
+version: "10.18.0"
+module: CINEMATIC_COMBAT_DIRECTOR_INTELLIGENCE
+
+cinematic_value:
+  inputs:
+    - impact_level
+    - weapon_change
+    - ability_release
+    - environment_change
+    - emotional_turn
+
+shot_decision:
+  closeup:
+    enabled: true
+  slow_motion:
+    enabled: true
+  spatial_transition:
+    enabled: true
+
+final_composition:
+  enabled: true

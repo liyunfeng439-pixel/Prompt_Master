@@ -1,0 +1,73 @@
+version: 10.2.2
+status: CANONICAL_CURRENT
+role: executable runtime contract authority
+current_execution_order:
+  - asset_ingestion
+  - fact_inference_guard
+  - immutable_canon
+  - master_combat_state
+  - state_contract_normalization
+  - combat_intent
+  - combat_first_pacing
+  - combat_personality
+  - combat_director
+  - knowledge_retrieval
+  - weapon_execution_integrity
+  - v4_action_knowledge_resolution
+  - candidate_filtering
+  - tactical_action_selection
+  - action_transition_validation
+  - action_ability_runtime
+  - actor_reaction
+  - temporal_spatial_physics
+  - vfx_result_visualization
+  - ending_state
+  - beat_graph
+  - shot_compression
+  - shot_budget
+  - shot_ir
+  - semantic_component_selection
+  - combat_semantic_compiler
+  - native_output_router
+  - adapter_semantic_regression
+  - deep_prompt_semantic_qa
+  - regression_gate
+hard_invariants:
+  - weapon_identity_integrity
+  - result_contract_integrity
+  - canonical_state_integrity
+  - transition_integrity
+  - ability_execution_integrity
+  - result_lock_barrier
+  - beat_id_integrity
+  - shot_budget_integrity
+  - single_shot_ir_source
+  - native_compiler_required
+  - adapter_fact_preservation
+  - inference_boundary_preservation
+  - prompt_runtime_term_suppression
+  - semantic_redundancy_gate
+  - semantic_component_reuse_gate
+  - semantic_bundle_collision_gate
+  - action_family_diversity_gate
+  - outcome_diversity_gate
+  - shot_role_differentiation_gate
+  - final_prompt_quality_gate
+current_components:
+  semantic_component_index: DATA/COMBAT_KNOWLEDGE/SEMANTIC_COMPONENT_INDEX_V10.2.2.json
+  semantic_diversity_engine: 43_COMBAT_SEMANTIC_DIVERSITY_ENGINE_V1.0/semantic_diversity_engine_v1020.py
+  semantic_compiler: 48_NATIVE_PROMPT_COMPILER_V3.0/native_prompt_compiler_v1022.py
+  deep_semantic_qa: 49_DEEP_PROMPT_SEMANTIC_QA_V3.0/deep_prompt_semantic_qa_v1022.py
+  runtime_harness: 47_RUNTIME_EXECUTION_HARNESS_V3.0/runtime_harness_v1022.py
+  shot_ir: CANONICAL_RUNTIME_V10.2.2/SHOT_IR_CONTRACT_V10.2.2.md
+  qa: QA_V10.2.2/V10.2.2_REGRESSION_RULES.md
+
+preflight_validation:
+  validator: TOOLS/validate_v1022.py
+  required_before_harness: true
+
+
+runtime_execution_harness_mode: zero_copy_in_process
+preflight_validator: TOOLS/validate_v1022.py
+compiler_current: 48_NATIVE_PROMPT_COMPILER_V3.0/native_prompt_compiler_v1022.py
+semantic_qa_current: 49_DEEP_PROMPT_SEMANTIC_QA_V3.0/deep_prompt_semantic_qa_v1022.py

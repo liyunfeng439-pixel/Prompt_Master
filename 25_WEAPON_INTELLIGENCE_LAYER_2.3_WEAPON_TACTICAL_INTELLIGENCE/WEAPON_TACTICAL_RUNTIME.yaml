@@ -1,0 +1,90 @@
+version: V10.18.4
+purpose: Weapon Tactical Intelligence Runtime
+
+decision_inputs:
+  - distance
+  - enemy_mobility
+  - defense_state
+  - opening_window
+  - battlefield_position
+  - remote_weapon_intent
+
+selection_rules:
+  - preserve_weapon_identity
+  - preserve_control_source
+  - require_behavior_transition
+  - universal_remote_control_capability
+  - remote_control_is_category_independent
+
+tactical_patterns:
+  telekinetic:
+    - release
+    - orbit
+    - tracking
+    - multi_angle_attack
+    - trajectory_change
+    - pierce
+    - return
+
+  universal_remote_weapon:
+    applies_to: all_canonical_weapons
+    behaviors:
+      - release
+      - orbit
+      - tracking
+      - multi_angle_attack
+      - trajectory_change
+      - target_strike
+      - return
+
+  flexible_weapon:
+    - extend
+    - bind
+    - anchor
+    - force_transfer
+    - pull
+    - retract
+
+  morph_weapon:
+    - short_form
+    - activate
+    - extend
+    - range_switch
+    - strike
+    - restore
+
+
+adaptive_weapon_control:
+  enabled: true
+  resolver: ADAPTIVE_WEAPON_CONTROL_INTELLIGENCE_V1.0.py
+  activation_model: bounded_contextual
+  explicit_intent_overrides_threshold: true
+  autonomous_threshold: 68
+  result_lock_blocks_activation: true
+  close_range_bias: HAND_HELD
+  category_independent: true
+  no_new_event: true
+  patterns:
+    - orbit
+    - angle_change
+    - multi_angle
+    - environment_redirect
+    - release_attack_return
+
+execution_variant_intelligence:
+  enabled: true
+  resolver: 25_WEAPON_INTELLIGENCE_LAYER_2.3_WEAPON_TACTICAL_INTELLIGENCE/ADAPTIVE_WEAPON_CONTROL_INTELLIGENCE_V1.0.py
+  modes:
+    - HAND_HELD_NATIVE
+    - REMOTE_EXECUTION_VARIANT
+  invariant:
+    source_action_not_mutated: true
+    hand_weapon_coupling_after_release: false
+    mass_inertia_preserved: true
+    trajectory_change_requires_control_cause: true
+  tracking_is_distinct_from_orbit: true
+  tactical_utility:
+    enabled: true
+    explicit_intent_override: true
+    control_cost_penalty: true
+    resource_pressure_penalty: true

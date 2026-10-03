@@ -1,0 +1,12 @@
+combat_outcome:
+  factors:
+    - distance
+    - timing
+    - stamina
+    - position
+    - weapon_advantage
+    - environment
+  output:
+    - advantage_state
+    - risk_level
+    - next_action_priority

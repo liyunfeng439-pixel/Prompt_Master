@@ -1,0 +1,64 @@
+version: 10.1.6
+status: CANONICAL_CURRENT
+name: Combat Prompt Master Native Combat Execution OS + Weapon Execution Integrity + Ability Execution Contract
+entry: ../SKILL.md
+contracts:
+  shot_budget: SHOT_BUDGET_CONTROLLER_V10.1.6.md
+  shot_ir: SHOT_IR_CONTRACT_V10.1.6.md
+  native_compiler_bridge: NATIVE_COMPILER_BRIDGE_V10.1.6.md
+  native_router: ../NATIVE_OUTPUT_ROUTER_V10.1.6/router.yaml
+  qa: ../QA_V10.1.6/V10.1.6_REGRESSION_RULES.md
+  governance: ../V10.1.6_RUNTIME_GOVERNANCE.md
+  weapon_integrity: ../34_WEAPON_EXECUTION_INTEGRITY_LAYER_V1.0/WEAPON_EXECUTION_INTEGRITY_GATE.md
+  ability_execution: ../35_ABILITY_EXECUTION_CONTRACT_V1.0/ABILITY_EXECUTION_CONTRACT.md
+runtime_order:
+  - asset_ingestion
+  - asset_normalization
+  - immutable_canon
+  - master_combat_state
+  - combat_intent
+  - combat_first_pacing
+  - combat_style_inference
+  - combat_director_brain
+  - knowledge_retrieval
+  - weapon_execution_integrity_gate
+  - v4_action_knowledge_resolution
+  - candidate_filtering
+  - tactical_action_selection
+  - v4_execution_contract_binding
+  - action_transition_validation
+  - action_ability_runtime
+  - ability_execution_contract
+  - actor_reaction
+  - temporal_spatial_event_identity
+  - physics_impact_damage
+  - v4_presentation_binding
+  - vfx_result_visualization
+  - final_combat_sequence
+  - ending_state
+  - beat_graph
+  - shot_compression
+  - shot_budget
+  - shot_ir
+  - native_output_router
+  - model_adapter
+  - qa_repair
+  - regression_gate
+hard_invariants:
+  - immutable_canon
+  - event_identity
+  - causal_order
+  - spatial_continuity
+  - physical_result
+  - damage_continuity
+  - ending_state
+  - shot_budget
+  - shot_ir_single_source
+  - adapter_semantic_invariants
+  - action_transition_validity
+  - weapon_execution_integrity
+  - v4_execution_contract_integrity
+  - ability_execution_contract_integrity
+  - v4_traceability
+  - runtime_path_integrity
+  - no_legacy_override

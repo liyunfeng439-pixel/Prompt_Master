@@ -1,0 +1,11 @@
+version: "1.0"
+status: ACTIVE
+flow: source → provenance → canon_eligibility → runtime_binding → prompt
+allowed_canon_sources:
+  - user_hard_constraint
+  - verified_asset
+  - explicit_reference
+forbidden:
+  - inferred_visual_detail_as_fact
+  - unknown_weapon_property_as_fact
+  - generated_ability_as_canon_without_authorization

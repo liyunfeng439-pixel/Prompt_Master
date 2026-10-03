@@ -1,0 +1,28 @@
+version: 3.0
+runtime: V10.1.6
+
+nodes:
+  - character_vfx_profile
+  - move_vfx_binding
+  - procedural_vfx_generator
+  - cinematic_vfx_controller
+  - prompt_vfx_compressor
+
+flow:
+  character_analysis:
+    output: CHARACTER_VFX_PROFILE
+
+  action_graph:
+    output: MOVE_VFX_DNA
+
+  vfx_generation:
+    input:
+      - CHARACTER_VFX_PROFILE
+      - MOVE_VFX_DNA
+      - WEAPON_STATE
+      - CAMERA_STATE
+    output: VFX_NODE_TREE
+
+  prompt_stage:
+    input: VFX_NODE_TREE
+    output: compressed_visual_events

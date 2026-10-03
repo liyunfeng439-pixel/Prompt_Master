@@ -1,0 +1,7 @@
+shot_state:
+  inherit_previous:
+    character_state: true
+    weapon_state: true
+    damage_state: true
+    environment_state: true
+    camera_context: true

@@ -1,0 +1,19 @@
+runtime:
+  architecture: multi_agent_collaboration
+
+layers:
+  - communication_protocol
+  - planning_debate
+  - arbitration
+  - shared_memory
+
+agents:
+  director: final_authority
+  combat: active
+  camera: active
+  vfx: active
+  prompt: active
+  quality_control: active
+
+feedback_loop:
+  enabled: true

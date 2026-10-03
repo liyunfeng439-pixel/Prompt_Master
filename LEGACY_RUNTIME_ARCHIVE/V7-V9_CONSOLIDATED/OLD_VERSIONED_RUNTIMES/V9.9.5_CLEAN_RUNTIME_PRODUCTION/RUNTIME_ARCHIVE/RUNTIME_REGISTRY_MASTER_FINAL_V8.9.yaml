@@ -1,0 +1,14 @@
+runtime:
+  version: V8.9
+
+pipeline:
+  - reference_analysis
+  - combat_director
+  - storyboard
+  - prompt_generation
+  - quality_evaluation
+  - failure_analysis
+  - learning
+  - strategy_evolution
+  - strategy_injection
+  - final_prompt_output

@@ -1,0 +1,22 @@
+runtime:
+  version: V9.3
+  architecture: autonomous_creative_director
+
+pipeline:
+  - creative_intent_analyzer
+  - production_manager
+  - multi_agent_collaboration
+  - creative_variant_generation
+  - director_arbitration
+  - storyboard_engine
+  - model_native_prompt_output
+  - quality_control
+  - learning_feedback
+
+agents:
+  - Battle_Director_Agent
+  - Combat_Choreography_Agent
+  - Camera_Director_Agent
+  - VFX_Intelligence_Agent
+  - Prompt_Engineering_Agent
+  - Quality_Control_Agent

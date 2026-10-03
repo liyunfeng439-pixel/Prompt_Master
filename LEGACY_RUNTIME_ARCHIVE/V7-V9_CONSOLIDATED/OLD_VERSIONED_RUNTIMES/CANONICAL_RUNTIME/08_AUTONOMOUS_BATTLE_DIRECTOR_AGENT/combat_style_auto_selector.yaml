@@ -1,0 +1,10 @@
+combat_style_selector:
+  inputs:
+    - character_profile
+    - weapon_profile
+    - environment
+  outputs:
+    - fantasy_combat
+    - modern_combat
+    - cyber_combat
+    - boss_battle

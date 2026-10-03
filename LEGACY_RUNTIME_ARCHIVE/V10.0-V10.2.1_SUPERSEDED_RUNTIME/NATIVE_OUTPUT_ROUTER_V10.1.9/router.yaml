@@ -1,0 +1,17 @@
+version: 10.1.9
+status: CANONICAL_CURRENT
+source: SHOT_IR_V10.1.9
+compiler: 41_COMBAT_SEMANTIC_COMPILER_V2.0/combat_semantic_compiler_v1019.py
+qa: 42_PROMPT_SEMANTIC_QA_V1.0/prompt_semantic_qa_v1019.py
+adapters:
+  - universal
+  - seedance_2_5
+  - minimax_h3
+immutable_fields:
+  - actors
+  - weapons
+  - event_ids
+  - event_order
+  - outcomes
+  - ending
+  - provenance

@@ -1,0 +1,12 @@
+version: 10.0
+runtime_name: Native Combat Execution OS
+pipeline:
+  - asset_normalization
+  - combat_identity_analysis
+  - combat_style_inference
+  - action_intelligence_engine
+  - cinematic_camera_runtime
+  - physics_result_runtime
+  - vfx_runtime
+  - native_prompt_compiler
+  - quality_validation

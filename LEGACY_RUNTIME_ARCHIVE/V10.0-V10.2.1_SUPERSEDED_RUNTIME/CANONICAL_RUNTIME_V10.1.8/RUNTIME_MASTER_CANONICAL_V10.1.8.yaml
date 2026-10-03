@@ -1,0 +1,45 @@
+version: 10.1.9
+status: CANONICAL_CURRENT
+base_version: 10.1.7
+execution_order:
+  - canon
+  - master_combat_state
+  - state_contract_normalization
+  - combat_director
+  - weapon_execution_integrity
+  - v4_action_knowledge_resolution
+  - candidate_selection
+  - action_execution_contract
+  - recovery_execution
+  - ability_execution_contract
+  - action_transition_validation
+  - beat_graph
+  - shot_compression
+  - shot_budget
+  - shot_ir
+  - native_prompt_compiler
+  - router
+  - adapter_semantic_regression
+  - qa
+authority_paths:
+  shot_budget: SHOT_BUDGET_CONTROLLER_V10.1.9.md
+  shot_ir: SHOT_IR_CONTRACT_V10.1.9.md
+  native_compiler_bridge: NATIVE_COMPILER_BRIDGE_V10.1.9.md
+  native_prompt_compiler: ../41_COMBAT_SEMANTIC_COMPILER_V2.0/combat_semantic_compiler_v1019.py
+  native_router: ../NATIVE_OUTPUT_ROUTER_V10.1.9/router.yaml
+  qa: ../QA_V10.1.9/V10.1.9_REGRESSION_RULES.md
+  semantic_regression: ../40_RUNTIME_SEMANTIC_REGRESSION_LAYER_V1.0/SEMANTIC_REGRESSION_RULES.md
+invariants:
+  - immutable_canon
+  - provenance_guard
+  - weapon_execution_integrity
+  - normalized_state_integrity
+  - outcome_result_integrity
+  - recovery_state_integrity
+  - transition_integrity
+  - ability_execution_integrity
+  - result_lock_barrier
+  - beat_id_integrity
+  - shot_budget_integrity
+  - single_shot_ir_source
+  - adapter_semantic_invariants

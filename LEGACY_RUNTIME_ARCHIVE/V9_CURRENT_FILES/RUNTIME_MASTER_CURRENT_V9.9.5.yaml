@@ -1,0 +1,17 @@
+# RUNTIME_MASTER_CURRENT_V9.9.5
+mode: Fast_Combat_Production
+model_target:
+  primary: Qwen3.8
+pipeline:
+  - reference_vision_analyzer
+  - character_combat_profile
+  - scene_tactical_analyzer
+  - combat_style_selector
+  - action_choreography_engine
+  - camera_director
+  - vfx_director
+  - native_prompt_compiler
+  - prompt_validator
+  - repair_loop
+fallback_mode:
+  universe_director: optional

@@ -1,0 +1,10 @@
+template_selector:
+  inputs:
+    character_profile:
+    combat_style:
+    environment:
+    target_model:
+  outputs:
+    recommended_battle_template:
+    camera_style:
+    pacing:

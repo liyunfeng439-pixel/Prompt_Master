@@ -1,0 +1,7 @@
+version: 1.0
+rules:
+  - impact_requires:
+      - force_feedback
+      - body_reaction
+      - environment_response
+  - preserve_vfx_layer: true

@@ -1,0 +1,44 @@
+version: V10.18.2
+purpose: Weapon Combat Behavior Graph Runtime
+nodes:
+  universal_remote_flow:
+    applies_to: all_canonical_weapons
+    states: [release, airborne, orbit, tracking, multi_angle_attack, environment_redirect, attack, trajectory_change, impact, return]
+    control_sources: [qi, magic, spiritual_force]
+    behaviors:
+      - release
+      - orbit
+      - tracking
+      - multi_angle_attack
+      - trajectory_change
+      - target_strike
+      - return
+      - environment_redirect
+  telekinetic_flow:
+    states: [release, airborne, attack, return]
+  flexible_flow:
+    states: [extend, bind, pull, retract]
+  morph_flow:
+    states: [short, activate, extend, strike, restore]
+constraints:
+  preserve_weapon_identity: true
+  preserve_weapon_count: true
+  preserve_weapon_mass_properties: true
+  require_state_transition_for_morph: true
+  require_control_source_for_remote_attack: true
+  universal_remote_control_capability: true
+  remote_control_category_gate: false
+  trajectory_change_requires_control_cause: true
+
+tactical_bridge:
+  enabled: true
+  source: combat_situation
+  target: behavior_selection
+  remote_control_selection:
+    enabled: true
+    category_independent: true
+    trigger: explicit_remote_weapon_intent_or_bounded_tactical_value
+    autonomous_threshold: 68
+
+tracking_is_distinct_from_orbit: true
+execution_variant_required_for_remote: true

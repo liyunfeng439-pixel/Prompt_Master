@@ -1,0 +1,13 @@
+version: "10.18.1"
+fields:
+  combat_narrative:
+    current_state: required
+    combat_intent: required
+    reason_for_action: required
+    state_transition: required
+    escalation_level: required
+    next_expected_state: required
+    provenance: required
+  narrative_curve:
+    duration_s: required
+    segments: required

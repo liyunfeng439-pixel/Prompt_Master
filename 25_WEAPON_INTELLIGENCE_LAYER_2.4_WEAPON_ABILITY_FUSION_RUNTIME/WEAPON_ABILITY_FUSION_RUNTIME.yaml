@@ -1,0 +1,17 @@
+version: "10.14.0"
+module: WEAPON_ABILITY_FUSION_RUNTIME
+purpose: "Bind weapon behavior, character ability, elemental identity, VFX and environment response into one combat event chain."
+
+fusion_pipeline:
+  - character_ability
+  - weapon_behavior
+  - elemental_affinity
+  - vfx_feedback
+  - environment_reaction
+  - shot_ir_export
+
+rules:
+  preserve_weapon_identity: true
+  preserve_ability_identity: true
+  require_energy_cause_for_transformation: true
+  require_environment_result_for_high_impact_events: true

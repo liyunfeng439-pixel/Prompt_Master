@@ -1,0 +1,37 @@
+version: 10.9.0
+status: CANONICAL_CURRENT
+source: SHOT_IR_V10.9.0
+compiler: 48_NATIVE_PROMPT_COMPILER_V3.1/native_prompt_compiler_v1090.py
+qa: 49_DEEP_PROMPT_SEMANTIC_QA_V3.1/deep_prompt_semantic_qa_v1090.py
+adapters:
+  - universal
+  - seedance_2_5
+  - minimax_h3
+compiler_policy: model_native_structure_preserved
+immutable_fields:
+  - actors
+  - weapons
+  - event_ids
+  - event_order
+  - outcomes
+  - ending
+  - provenance
+semantic_fields_allowed_to_change:
+  - section_order_within_adapter_contract
+  - phrase_compaction
+  - shot_format
+  - model_tokenization
+  - pacing_wording
+forbidden_changes:
+  - actor_identity
+  - weapon_identity
+  - event_order
+  - physical_result
+  - damage_state
+  - ending
+  - shot_count
+  - shot_duration
+  - spatial_semantics
+notes:
+  - Seedance and MiniMax formats are Skill-native compilation contracts unless directly supported by public vendor documentation.
+  - The adapter must express the same SHOT_IR semantics through model-specific organization, not copy-paste one generic template.
